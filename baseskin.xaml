@@ -1,0 +1,10 @@
+    <ControlTemplate x:Key="complaintSearchInputBox">
+        <demographics:WatermarkedSearchTextBox Foreground="{StaticResource StandardForeground}" 
+                                Background="{StaticResource StandardBackground}"
+             VerticalContentAlignment="Center" 
+            BorderBrush="Black"
+            Style="{StaticResource WatermarkSearch}"
+            Watermark="{x:Static demographics:Properties.Resources.ComplaintSearchWatermark}"
+            Text="{Binding Path=SearchCriteria, UpdateSourceTrigger=PropertyChanged}"
+            SearchCommand="{Binding Search}" SearchCount="{Binding PresentingComplaints.Count}"/>
+    </ControlTemplate>
